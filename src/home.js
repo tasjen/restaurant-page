@@ -1,5 +1,6 @@
 export default function loadHome(){
   const main = document.createElement('main');
+  main.id = 'main-home';
   const sec1 = document.createElement('div');
   sec1.textContent = '1';
   const sec2 = document.createElement('div');
@@ -14,5 +15,6 @@ export default function loadHome(){
   main.appendChild(sec3);
   main.appendChild(sec4);
   
+  document.querySelector('#home').classList.add('onpage');
   document.querySelector('#content').appendChild(main);
 }
