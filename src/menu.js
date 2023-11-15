@@ -9,7 +9,6 @@ export default function loadMenu(){
     menuContainer.appendChild(item);
   }
   main.appendChild(menuContainer);
-
-  document.querySelector('#menu').classList.add('onpage');
   document.querySelector('#content').appendChild(main);
+  document.querySelector('nav #menu').classList.add('onpage');
 }

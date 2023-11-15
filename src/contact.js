@@ -6,6 +6,6 @@ export default function loadContact(){
   contact.textContent = 'tel +6969696969';
   
   main.appendChild(contact);
-  document.querySelector('#contact').classList.add('onpage');
   document.querySelector('#content').appendChild(main);
+  document.querySelector('nav #contact').classList.add('onpage');
 }

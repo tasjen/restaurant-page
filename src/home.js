@@ -15,6 +15,6 @@ export default function loadHome(){
   main.appendChild(sec3);
   main.appendChild(sec4);
   
-  document.querySelector('#home').classList.add('onpage');
   document.querySelector('#content').appendChild(main);
+  document.querySelector('nav #home').classList.add('onpage');
 }
