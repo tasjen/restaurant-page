@@ -21,19 +21,17 @@ function loadNav(){
   ul.appendChild(menu)
   ul.appendChild(contact);
   ul.childNodes.forEach(page => {
-    page.addEventListener('click', () => {
-      if (!page.classList.contains('onpage')) {
-        switchToPage(page.id);
-      }
-    })
+    page.addEventListener('click', () => switchToPage(page))
   });
   navbar.appendChild(ul);
   document.querySelector('#content').appendChild(navbar);
 }
 
 function switchToPage(page){
-  clearPage();
-  loadPage(page);
+  if (!page.classList.contains('onpage')) {
+    clearPage();
+    loadPage(page.id);
+  }
 }
 
 function clearPage(){
