@@ -13,14 +13,13 @@
 }
 
 body {
-  background-image: url('./food-background.jpg');
+  background-image: url("./food-background.jpg");
   background-size: cover;
 }
 
-#content {
+#navbar {
   display: flex;
-  flex-direction: column;
-  align-items: center;
+  justify-content: center;
 }
 
 #navbar > ul {
@@ -31,10 +30,10 @@ body {
   font-size: 2rem;
 }
 
-#navbar li {
+#navbar > ul > li {
   padding: 15px 50px;
   width: 100px;
-  text-align:center;
+  text-align: center;
   background-color: var(--light-orange);
   border: var(--black-border);
   margin-bottom: 50px;
@@ -49,10 +48,11 @@ body {
 #main-home {
   display: flex;
   flex-direction: column;
+  align-items: center;
   gap: 20px;
 }
 
-#main-home > div{
+#main-home > div {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -62,28 +62,37 @@ body {
   border: var(--black-border);
 }
 
-#main-contact {
+#main-menu {
   display: flex;
   justify-content: center;
-  align-items: center;
-  width: 500px;
-  height: 500px;
-  background-color: var(--light-orange);
-  border: var(--black-border);
+  gap: 10px;
 }
 
-#main-menu > #menu-container {
+#menu-container {
+  margin: 100px;
   display: grid;
-  gap: 10px;
-  width: 800px;
-  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  max-width: 800px;
+  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+  gap: 20px;
 }
 
 #menu-container > div {
   border: var(--black-border);
-  display: flex;
-  justify-content:center;
-  align-items: center;
-  background-color: var(--light-orange);
   height: 150px;
+  width: 150px; /*why do I have to write this line(why don't grid-template-column work?)*/
+  background-color: var(--light-orange);
+  justify-self: center;
+}
+
+#main-contact {
+  display: flex;
+  justify-content: center;
+}
+
+#main-contact > #contact {
+  background-color: var(--light-orange);
+  border: var(--black-border);
+  text-align: center;
+  width: 500px;
+  height: 500px;
 }
